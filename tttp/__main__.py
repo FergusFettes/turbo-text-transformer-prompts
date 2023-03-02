@@ -24,7 +24,7 @@ def find_file(filename):
         Path.cwd() / 'templates',
         Path.cwd().parent / 'templates', 
         Path.home() / ".config/ttt/templates",
-        Path.home() / ".config/tttp/templates/general"
+        Path.home() / ".config/tttp/templates/templates"
     ]
 
     # Make sure file ends with 'j2'
@@ -39,7 +39,7 @@ def find_file(filename):
         for p in path.iterdir():
             if p.is_dir() and (p / filename).exists():
                 return p / filename
-    raise FileNotFoundError(f"File {filename} not found. Looked in {path} and subdirectories.")
+    raise FileNotFoundError(f"File {filename} not found. Looked in {paths} and subdirectories.")
 
 
 @click.command()
