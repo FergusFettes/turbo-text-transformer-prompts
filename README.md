@@ -2,7 +2,7 @@
 
 Designed for use with [turbo-text-transformer](https://github.com/fergusfettes/turbo-text-transformer).
 
-You pipe some text in, the template is applied, then you pipe it into `ttt` which will process it with eg. OpenAIkjj
+You pipe some text in, the template is applied, then you pipe it into `ttt` which will process it with eg. OpenAI.
 
 ```
 cat pyproject.toml tttp/__main__.py | tttp -t readme | ttt > README.md
