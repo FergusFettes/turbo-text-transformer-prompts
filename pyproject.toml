@@ -22,10 +22,16 @@ tttp = "tttp:main"
 [project]
 name = "turbo-text-transformer-prompts"
 version = "0.1.0"
-include = ["tttp.py"]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 
 [project.scripts]
 tttp = "tttp:main"
+
+[tool.setuptools]
+packages = ["tttp"]
 
 [build-system]
 requires = ["setuptools>=61.0"]
