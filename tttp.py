@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
+import jinja2
 
 import click
 
@@ -40,6 +41,16 @@ def find_file(filename):
             if p.is_dir() and (p / filename).exists():
                 return p / filename
     raise FileNotFoundError(f"File {filename} not found. Looked in {paths} and subdirectories.")
+
+
+class Prompter:
+    def __init__(self, filename, prompt, args=None):
+        self.template = Path(filename).read_text()
+        self.args = args or {'prompt': prompt} 
+        self.args.update({'prompt': prompt}) 
+
+    def prompt(self):
+        return jinja2.Template(self.template).render(self.args)
 
 
 @click.command()
