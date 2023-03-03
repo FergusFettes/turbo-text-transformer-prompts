@@ -20,7 +20,7 @@ You will also need to clone the repository containing the templates you want to 
 
 ```sh
 mkdir -p ~/.config/ttt/
-git clone https://github.com/fergusfettes/turbo-text-transformer-prompts ~/.config/ttt/tttp
+git clone https://github.com/fergusfettes/turbo-text-transformer-prompts ~/.config/tttp
 ```
 
 ## Template Structure
