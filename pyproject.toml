@@ -3,9 +3,8 @@ name = "turbo-text-transformer-prompts"
 version = "0.1.0"
 description = ""
 authors = ["fergus <fergusfettes@gmail.com>"]
-homepage = "https://github.com/fergusfettes/turbo-text-transformer-prompts"
 readme = "README.md"
-include = ["tttp.py"]
+packages = [{include = "tttp"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -17,7 +16,7 @@ ipdb = "^0.13.11"
 ipython = "^8.11.0"
 
 [tool.poetry.scripts]
-tttp = "tttp:main"
+tttp = "tttp.__main__:main"
 
 [project]
 name = "turbo-text-transformer-prompts"
@@ -28,7 +27,7 @@ dynamic = ["dependencies"]
 dependencies = {file = ["requirements.txt"]}
 
 [project.scripts]
-tttp = "tttp:main"
+tttp = "tttp.__main__:main"
 
 [tool.setuptools]
 packages = ["tttp"]
