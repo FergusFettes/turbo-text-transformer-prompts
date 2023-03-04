@@ -5,7 +5,7 @@ description = ""
 authors = ["fergus <fergusfettes@gmail.com>"]
 readme = "README.md"
 packages = [{include = "tttp"}]
-include = [{path = "templates"}]
+include = [{path = "templates/*.j2"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
