@@ -38,3 +38,7 @@ class Prompter:
                 if p.is_dir() and (p / filename).exists():
                     return p / filename
         raise FileNotFoundError(f"File {filename} not found. Looked in {paths} and subdirectories.")
+
+    @classmethod
+    def from_file(cls, filename):
+        return cls(cls.find_file(filename))
