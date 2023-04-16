@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "turbo-text-transformer-prompts"
-version = "0.1.9"
+version = "0.1.10"
 description = ""
 authors = ["fergus <fergusfettes@gmail.com>"]
 readme = "README.md"
@@ -21,7 +21,7 @@ tttp = "tttp.__main__:main"
 
 [project]
 name = "turbo-text-transformer-prompts"
-version = "0.1.9"
+version = "0.1.10"
 dynamic = ["dependencies"]
 
 [tool.setuptools.dynamic]
