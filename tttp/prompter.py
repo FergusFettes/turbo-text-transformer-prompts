@@ -6,11 +6,12 @@ from pathlib import Path
 
 
 class Prompter:
-    def __init__(self, filename):
+    def __init__(self, filename, args=None):
         self.template = Path(filename).read_text()
+        self.args = args or {}
 
     def prompt(self, prompt, args=None):
-        args = args or {'prompt': prompt} 
+        args = args or {'prompt': prompt, **self.args}
         args.update({'prompt': prompt}) 
         return jinja2.Template(self.template).render(args)
 
